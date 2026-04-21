@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/kmsaddam/Product-Testing-with-Selenium-Javascript/issues"
   },
-  "homepage": "https://github.com/kmsaddam/Product-Testing-with-Selenium-Javascript#readme"
+  "homepage": "https://github.com/kmsaddam/Product-Testing-with-Selenium-Javascript#readme",
+  "dependencies": {
+    "chromedriver": "^147.0.4",
+    "mocha": "^11.7.5",
+    "selenium-webdriver": "^4.43.0"
+  }
 }
