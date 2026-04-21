@@ -1,0 +1,21 @@
+{
+  "name": "product-testing-with-selenium-javascript",
+  "version": "1.0.0",
+  "description": "A small project for product testing using JavaScript.It mirrors real QA automation tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmsaddam/Product-Testing-with-Selenium-Javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kmsaddam/Product-Testing-with-Selenium-Javascript/issues"
+  },
+  "homepage": "https://github.com/kmsaddam/Product-Testing-with-Selenium-Javascript#readme"
+}
