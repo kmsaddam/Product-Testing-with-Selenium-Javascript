@@ -40,5 +40,16 @@ describe("Product Testing Suite", function () {
     assert(productName.length > 0);
   });
 
+  it("should add product to cart", async () => {
+    await driver.findElement(By.id("user-name")).sendKeys("standard_user");
+    await driver.findElement(By.id("password")).sendKeys("secret_sauce");
+    await driver.findElement(By.id("login-button")).click();
+
+    await driver.findElement(By.className("btn_inventory")).click();
+
+    let badge = await driver.findElement(By.className("shopping_cart_badge")).getText();
+    assert.strictEqual(badge, "1");
+  });
+
 
 });
