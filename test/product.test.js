@@ -29,5 +29,16 @@ describe("Product Testing Suite", function () {
     assert(url.includes("inventory"));
   });
 
+   it("should open a product and verify name", async () => {
+    await driver.findElement(By.id("user-name")).sendKeys("standard_user");
+    await driver.findElement(By.id("password")).sendKeys("secret_sauce");
+    await driver.findElement(By.id("login-button")).click();
+
+    await driver.findElement(By.className("inventory_item_name")).click();
+
+    let productName = await driver.findElement(By.className("inventory_details_name")).getText();
+    assert(productName.length > 0);
+  });
+
 
 });
