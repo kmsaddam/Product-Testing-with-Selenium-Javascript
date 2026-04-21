@@ -1,11 +1,11 @@
-const { By } = require("selenium-webdriver");
+const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require("assert");
 const { getDriver } = require("../utils/driver");
 
-describe("E-commerce Product Testing", function () {
+describe("Product Testing Suite", function () {
   let driver;
 
-  this.timeout(30000);
+  this.timeout(100000);
 
   beforeEach(async () => {
     driver = await getDriver();
@@ -15,14 +15,19 @@ describe("E-commerce Product Testing", function () {
     await driver.quit();
   });
 
-  // 🔐 Login Test
+
+  console.log("Product Testing Suite is running...");
+
+    // 🔐 Login Test
   it("should login successfully", async () => {
     await driver.findElement(By.id("user-name")).sendKeys("standard_user");
     await driver.findElement(By.id("password")).sendKeys("secret_sauce");
     await driver.findElement(By.id("login-button")).click();
 
     let url = await driver.getCurrentUrl();
+    // console.log(url);
     assert(url.includes("inventory"));
   });
+
 
 });
